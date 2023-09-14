@@ -13,7 +13,7 @@ public class ContaTerminal {
         this.nomeTitular = nomeTitular;
         }
         public void exibirMensagem() {
-        System.out.println("Olá " + nomeTitular + ", obrigado por criar uma conta em nosso banco.");
+        System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco.");
         System.out.println("Sua agência é " + numeroAgencia + ", conta número " + numeroConta + ",");
         System.out.println("e seu saldo já está disponível para saque: R$" + saldo);
         }

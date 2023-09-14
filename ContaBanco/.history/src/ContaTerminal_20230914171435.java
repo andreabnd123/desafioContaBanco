@@ -6,14 +6,14 @@ public class ContaTerminal {
     private double saldo;
     private String nomeTitular;
 
-    public ContaTerminal(int numeroAgencia, int numeroConta, double saldo, String nomeTitular) {
+    public class ContaTerminal(int numeroAgencia, int numeroConta, double saldo, String nomeTitular) {
         this.numeroAgencia = numeroAgencia;
         this.numeroConta = numeroConta;
         this.saldo = saldo;
         this.nomeTitular = nomeTitular;
         }
         public void exibirMensagem() {
-        System.out.println("Olá " + nomeTitular + ", obrigado por criar uma conta em nosso banco.");
+        System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco.");
         System.out.println("Sua agência é " + numeroAgencia + ", conta número " + numeroConta + ",");
         System.out.println("e seu saldo já está disponível para saque: R$" + saldo);
         }
@@ -35,10 +35,11 @@ public class ContaTerminal {
         System.out.print("Insira o saldo disponível: ");
         double saldo = scanner.nextDouble();
 
-        ContaTerminal conta = new ContaTerminal(numeroAgencia, numeroConta, saldo, nomeTitular);
+        ContaBancaria conta = new ContaBancaria(numeroAgencia, numeroConta, saldo, nomeTitular);
 
         conta.exibirMensagem();
         
+      
         scanner.close();
     }
 }
